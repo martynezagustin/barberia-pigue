@@ -1,0 +1,238 @@
+body {
+    font-family: 'Source Serif 4', serif;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.4)),
+        url("/assets/imgs/img-fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+.grid {
+    display: grid;
+    grid-template: "header"
+        "sectionI"
+        "sectionFORM";
+}
+
+.hr {
+    color: white;
+}
+
+.header {
+    grid-area: header;
+}
+
+.navbar {
+    background: transparent !important;
+}
+
+.carousel {
+    padding: 10px;
+}
+
+.nav-link {
+    margin: 0.2rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: whitesmoke !important;
+}
+
+.navbar-brand {
+    color: whitesmoke !important;
+    font-weight: bolder;
+}
+
+.navbar-toggler {
+    box-shadow: 0px 0px 19px 1px rgb(41, 41, 41);
+    background-color: whitesmoke;
+}
+
+.nav-link:hover {
+    background-color: whitesmoke;
+    color: rgb(41, 41, 41) !important;
+    transition: 500ms;
+    transform: scale(1.1, 1.1);
+}
+
+.navbar-brand:hover {
+    transition: 1000ms;
+    transform: rotate(360deg);
+}
+
+.introduction {
+    color: white;
+    text-align: center;
+    grid-area: sectionI;
+}
+
+.introduction h1 {
+    font-size: 3rem;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.introduction h1:hover {
+    background-color: rgb(238, 238, 238);
+    color: black;
+    border-radius: 10px;
+    transition: 200ms;
+}
+
+.img-introduction-logotype__img {
+    padding: 10px;
+    width: 20%;
+    border-radius: 100px;
+}
+
+.introduction-first-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem;
+    border: 1px solid whitesmoke;
+}
+
+.introduction-container {
+    display: grid;
+    width: 100%;
+    background-color: black;
+    grid-template: "content photo" /
+        50% 50%;
+}
+
+.introduction-container__div-texts {
+    grid-area: content;
+}
+.introduction-container__div-texts p{
+    font-size: 1.5rem;
+}
+.introduction-container__div-img {
+    grid-area: photo;
+}
+
+.introduction-container__btn {
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+}
+
+.introduction-container__btn:hover {
+    background-color: rgb(80, 80, 80);
+    color: whitesmoke;
+    border: none;
+}
+
+.form-section {
+    color: black;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-size: cover;
+    grid-area: sectionFORM;
+}
+
+.form-section h2 {
+    text-align: center;
+}
+
+.h2 {
+    color: white;
+    text-align: center;
+}
+
+.profits {
+    margin-top: 1rem;
+}
+
+.profits-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profits-container__cont {
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    width: 25%;
+    text-align: center;
+    background-color: whitesmoke;
+    color: black;
+    margin: 1rem;
+}
+
+.profits-container__cont:hover {
+    transform: scale(1.03, 1.03);
+}
+
+.myForm {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 1px rgb(41, 41, 41);
+    background-color: white;
+}
+
+.line-form {
+    width: 35%;
+    border-top: 1px solid white;
+}
+
+.h2-with-lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-send-form {
+    background-color: black;
+    color: white;
+}
+
+.btn-send-form:hover {
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+
+@media screen and (max-width:992px){
+    .nav-link:hover {
+        transition: none;
+        transform: none;
+    }
+    .profits-container {
+        flex-wrap: wrap;
+    }
+    .profits-container p{
+        font-size: 0.8em;
+    }
+    .profits-container__cont{
+        width: 45%;
+    }
+}
+
+@media (max-width:768px) {
+    .introduction-container {
+        display: grid;
+        width: 100%;
+        background-color: black;
+        grid-template: "content"
+            "photo" /
+            100%;
+    }
+    .introduction-container__div-texts{
+        margin-bottom: 1rem;
+    }
+    .profits-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    .profits-container__cont {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
