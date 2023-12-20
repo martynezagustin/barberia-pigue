@@ -49,9 +49,12 @@
         </nav>
     </header>
     <!--Introduccion, imagenes-->
+    <div class="text-center p-1" data-aos="flip-right">
+        <span id="hour"></span>
+    </div>
     <section class="global-body">
 
-        <section class="introduction">
+        <section class="introduction" data-aos="fade">
             <hr class="hr">
             <h1>BIENVENIDO A <span id="barberia-pigue-span">BARBERÍA PIGÜÉ</span></h1>
             <hr class="hr">
@@ -110,22 +113,26 @@
                 <h2 class="h2 p-3">AGENDÁ TU TURNO</h2>
                 <div class="line-form"></div>
             </div>
-            <form class="myForm" id="myForm">
+            <form class="myForm" id="myForm" method="POST" action="https://formspree.io/f/mgegwzpq">
                 <div class="mb-3">
                     <label for="myForm__first-name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" placeholder="Introduce tu nombre" id="myForm__first-name"
+                    <input type="text" name="nombre" class="form-control" placeholder="Introduce tu nombre" id="myForm__first-name"
                         aria-describedby="nameHelp">
                 </div>
                 <div class="mb-3">
                     <label for="myForm__last-name" class="form-label">Apellido</label>
-                    <input type="password" class="form-control" id="myForm__last-name"
+                    <input type="text" name="apellido" class="form-control" id="myForm__last-name"
                         placeholder="Introduce tu apellido">
                 </div>
                 <!--Aqui habria que asignar una opcion para calendario-->
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <div class="mb-3">
+                    <label for="myForm__last-name" class="form-label">¿Para qué fecha deseas el turno?</label>
+                    <div>
+                        <input type="datetime-local" name="fecha" class="" id="myForm__datepicker"
+                        placeholder="Establece una fecha">
+                    </div>
                 </div>
+                
                 <button type="submit" class="btn btn-send-form">Agendar</button>
             </form>
         </section>
@@ -139,6 +146,13 @@
     <script>
         AOS.init();
     </script>
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+     <script src="./js/jquery/app.js"></script>
+     
+     <footer class="footer">
+        <p>&copy; Todos los derechos reservados. 2023</p>
+     </footer>
 </body>
 
 </html>
