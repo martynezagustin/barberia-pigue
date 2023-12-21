@@ -14,7 +14,8 @@ body {
     display: grid;
     grid-template: "header"
         "sectionI"
-        "sectionFORM";
+        "sectionFORM"
+        "footer";
 }
 
 .hr {
@@ -201,6 +202,14 @@ input[type="datetime-local"]{
 .btn-send-form:hover {
     background-color: rgb(80, 80, 80);
     color: white;
+}
+.footer{
+    grid-area: footer;
+    background: linear-gradient(180deg, rgb(230,230,230),white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width:992px) {

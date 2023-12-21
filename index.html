@@ -1,158 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bienvenido a Barbería Pigüé</title>
     <!--Links Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <!--Link CSS-->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
     <!--Insertar fuentes-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz@8..60&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz@8..60&display=swap"
+      rel="stylesheet"
+    />
     <!--Animate on scroll-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!--Font Awesome-->
-    <script src="https://kit.fontawesome.com/fc56ef5297.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/fc56ef5297.js"
+      crossorigin="anonymous"
+    ></script>
 
-<body class="grid">
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  </head>
+
+  <body class="grid">
     <header class="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="./assets/imgs/img-logo.png" width="100" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#services">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#agendar-turno">Agendar Turno</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Ubicación</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="./assets/imgs/img-logo.png" width="100" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#services"
+                  >Servicios</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#agendar-turno">Agendar Turno</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ubicación</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <!--Introduccion, imagenes-->
-    <div class="text-center p-1" data-aos="flip-right">
-        <span id="hour"></span>
+    <div class="text-center p-1 mt-2">
+      <span id="hour"></span>
     </div>
     <section class="global-body">
+      <section class="introduction" data-aos="fade">
+        <hr class="hr" />
+        <h1>
+          BIENVENIDO A <span id="barberia-pigue-span">BARBERÍA PIGÜÉ</span>
+        </h1>
+        <hr class="hr" />
 
-        <section class="introduction" data-aos="fade">
-            <hr class="hr">
-            <h1>BIENVENIDO A <span id="barberia-pigue-span">BARBERÍA PIGÜÉ</span></h1>
-            <hr class="hr">
-
-            <div class="introduction-first-div">
-
-                <div class="introduction-container">
-                    <div class="introduction-container__div-texts text-start p-2">
-                        <h2><strong>BARBERÍA PIGÜÉ</strong></h2>
-                        <p>Contamos con una serie de esencialidades en torno a tu estilo. ¿Qué esperas para pasarte por
-                            nuestro local?</p>
-                        <a class="btn introduction-container__btn" href="#agendar-turno"><i class="fa fa-paper-plane" aria-hidden="true"></i>
-                            SOLICITAR TURNO</a>
-                    </div>
-                    <div class="introduction-container__div-img">
-                        <img src="./assets/imgs/img-popurri/1.jpg" alt="images"
-                            class="introduction-container__div-img__img mw-100">
-                    </div>
-                </div>
+        <div class="introduction-first-div">
+          <div class="introduction-container">
+            <div class="introduction-container__div-texts text-start p-2">
+              <h2><strong>BARBERÍA PIGÜÉ</strong></h2>
+              <p>
+                Contamos con una serie de esencialidades en torno a tu estilo.
+                ¿Qué esperas para pasarte por nuestro local?
+              </p>
+              <a class="btn introduction-container__btn" href="#agendar-turno"
+                ><i class="fa fa-paper-plane" aria-hidden="true"></i> SOLICITAR
+                TURNO</a
+              >
             </div>
-
-
-        </section>
-
-        <section class="profits" id="services">
-            <div class="h2-with-lines mb-3">
-                <div class="line-form"></div>
-                <h2 class="h2 p-5">SERVICIOS</h2>
-                <div class="line-form"></div>
+            <div class="introduction-container__div-img">
+              <img
+                src="./assets/imgs/img-popurri/1.jpg"
+                alt="images"
+                class="introduction-container__div-img__img mw-100"
+              />
             </div>
-            <div class="profits-container">
-                <div class="profits-container__cont">
-                    <h3 class="fw-bold"><u>CORTE</u></h3>
-                    <p>Cualquiera sea el estilo. ¿Deseas clásico o moderno?</p>
-                </div>
-                <div class="profits-container__cont">
-                    <h3 class="fw-bold"><u>BARBA</u></h3>
-                    <p>Para darle tupé a tu vello facial.</p>
-                </div>
-                <div class="profits-container__cont">
-                    <h3 class="fw-bold"><u>FEMENINO</u></h3>
-                    <p>Las mujeres tienen su espacio en nuestra barbería.</p>
-                </div>
-                <div class="profits-container__cont">
-                    <h3 class="fw-bold"><u>NIÑOS</u></h3>
-                    <p>Ellos también son parte del sistema.</p>
-                </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="profits" id="services">
+        <div class="h2-with-lines mb-3">
+          <div class="line-form"></div>
+          <h2 class="h2 p-5" data-aos="fade">SERVICIOS</h2>
+          <div class="line-form"></div>
+        </div>
+        <div class="profits-container">
+          <div class="profits-container__cont" data-aos="flip-right">
+            <h3 class="fw-bold"><u>CORTE</u></h3>
+            <p>Cualquiera sea el estilo. ¿Deseas clásico o moderno?</p>
+          </div>
+          <div class="profits-container__cont" data-aos="flip-left">
+            <h3 class="fw-bold"><u>BARBA</u></h3>
+            <p>Para darle tupé a tu vello facial.</p>
+          </div>
+          <div class="profits-container__cont" data-aos="flip-up">
+            <h3 class="fw-bold"><u>FEMENINO</u></h3>
+            <p>Las mujeres tienen su espacio en nuestra barbería.</p>
+          </div>
+          <div class="profits-container__cont" data-aos="flip-down">
+            <h3 class="fw-bold"><u>NIÑOS</u></h3>
+            <p>Ellos también son parte del sistema.</p>
+          </div>
+        </div>
+      </section>
+
+      <!--Parte de formulario de contacto-->
+
+      <section class="form-section mb-5 mt-5" id="agendar-turno">
+        <div class="h2-with-lines">
+          <div class="line-form"></div>
+          <h2 class="h2 p-3" data-aos="fade">AGENDÁ TU TURNO</h2>
+          <div class="line-form"></div>
+        </div>
+        <form
+          class="myForm"
+          id="myForm"
+          method="POST"
+          action="https://formspree.io/f/mgegwzpq"
+          data-aos="fade"
+        >
+          <div class="mb-3">
+            <label for="myForm__first-name" class="form-label">Nombre</label>
+            <input
+              type="text"
+              required
+              name="nombre"
+              class="form-control"
+              placeholder="Introduce tu nombre"
+              id="myForm__first-name"
+              aria-describedby="nameHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="myForm__last-name" class="form-label">Apellido</label>
+            <input
+              type="text"
+              name="apellido"
+              required
+              class="form-control"
+              id="myForm__last-name"
+              placeholder="Introduce tu apellido"
+            />
+          </div>
+          <!--Aqui habria que asignar una opcion para calendario-->
+          <div class="mb-3">
+            <label for="myForm__datepicker" class="form-label"
+              >¿Para qué fecha deseas el turno?</label
+            >
+            <div>
+              <input
+                type="datetime-local"
+                name="fecha"
+                required
+                class=""
+                id="myForm__datepicker"
+                placeholder="Establece una fecha"
+              />
             </div>
-        </section>
+          </div>
 
-        <!--Parte de formulario de contacto-->
+          <button type="submit" class="btn btn-send-form">Agendar</button>
+        </form>
+      </section>
 
-        <section class="form-section mb-5 mt-5" id="agendar-turno">
-            <div class="h2-with-lines">
-                <div class="line-form"></div>
-                <h2 class="h2 p-3">AGENDÁ TU TURNO</h2>
-                <div class="line-form"></div>
-            </div>
-            <form class="myForm" id="myForm" method="POST" action="https://formspree.io/f/mgegwzpq">
-                <div class="mb-3">
-                    <label for="myForm__first-name" class="form-label">Nombre</label>
-                    <input type="text" name="nombre" class="form-control" placeholder="Introduce tu nombre" id="myForm__first-name"
-                        aria-describedby="nameHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="myForm__last-name" class="form-label">Apellido</label>
-                    <input type="text" name="apellido" class="form-control" id="myForm__last-name"
-                        placeholder="Introduce tu apellido">
-                </div>
-                <!--Aqui habria que asignar una opcion para calendario-->
-                <div class="mb-3">
-                    <label for="myForm__last-name" class="form-label">¿Para qué fecha deseas el turno?</label>
-                    <div>
-                        <input type="datetime-local" name="fecha" class="" id="myForm__datepicker"
-                        placeholder="Establece una fecha">
-                    </div>
-                </div>
-                
-                <button type="submit" class="btn btn-send-form">Agendar</button>
-            </form>
-        </section>
-
-
-        <!--Ubicacion en el mapa-->
+      <!--Ubicacion en el mapa-->
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script src="./js/jquery/app.js"></script>
+
+    <footer class="footer p-4">
+      <p>&copy; Todos los derechos reservados. 2023</p>
+    </footer>
 
     <!--Animate on Scroll-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
-     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
-     <script src="./js/jquery/app.js"></script>
-     
-     <footer class="footer">
-        <p>&copy; Todos los derechos reservados. 2023</p>
-     </footer>
-</body>
-
+    <!--Toastify-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </body>
 </html>
