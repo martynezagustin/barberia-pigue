@@ -1,3 +1,5 @@
+//in this archive, the most important topics are the form and the hour
+
 //inputs
 const name = $("#myForm__first-name");
 const lastName = $("#myForm__last-name");
@@ -52,47 +54,49 @@ const setHour = () => {
   }, 1000);
 };
 
+const setToast = (text, bgColor) => {
+  return Toastify({
+    text: text,
+    close: true,
+    style: {
+      color: "white",
+      background: bgColor,
+      boxShadow: "none",
+    },
+  }).showToast();
+}
+
 setHour();
 
-const fechaFormulario = new Date(inputDate.value);
 const sendForm = async (event) => {
   event.preventDefault();
   let data = new FormData(event.target);
-  const fechaActual = new Date();
   if (name.value == "" || lastName.value == "" || inputDate.value == "") {
     alert("Hay campos vacios.");
   } else {
-    fetch(event.target.action, {
-      method: "POST",
-      body: data,
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          Toastify({
-            text: `Tus datos fueron enviados! Tu orden esta bajo el numero ${Math.floor(
-              Math.random() * 6000
-            )}`,
-            close: true,
-            style: {
-              color: "white",
-              background: "black",
-              boxShadow: "none",
-            },
-          }).showToast();
-        } else {
-          alert("UPS... Ocurrio un error, intentalo otro dia");
-        }
+    const fechaActual = new Date();
+    const fechaForm = new Date(inputDate.val())
+    console.log(fechaActual);
+    console.log(fechaForm);
+    if (fechaForm < fechaActual) {
+      setToast("No puedes ingresar una fecha anterior a la actual.", "red");
+    } else {
+      fetch(event.target.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
       })
-      .catch((err) => console.log("Hubo un error " + err));
-  }
-};
-
-const verificarFecha = () => {
-  if (fechaFormulario < fechaActual) {
-    alert("No puedes enviar una fecha anterior.");
+        .then((response) => {
+          if (response.ok) {
+            setToast("¡Felicidades! Acabas de agendar tu turno.", "black")
+          } else {
+            alert("UPS... Ocurrio un error, intentalo otro dia");
+          }
+        })
+        .catch((err) => console.log("Hubo un error " + err));
+    }
   }
 };
 
